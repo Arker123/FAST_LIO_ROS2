@@ -50,12 +50,12 @@ def generate_launch_description():
                     {'use_sim_time': use_sim_time}],
         output='screen'
     )
-    rviz_node = Node(
-        package='rviz2',
-        executable='rviz2',
-        arguments=['-d', rviz_cfg],
-        condition=IfCondition(rviz_use)
-    )
+    # rviz_node = Node(
+    #     package='rviz2',
+    #     executable='rviz2',
+    #     arguments=['-d', rviz_cfg],
+    #     condition=IfCondition(rviz_use)
+    # )
 
     ld = LaunchDescription()
     ld.add_action(declare_use_sim_time_cmd)
